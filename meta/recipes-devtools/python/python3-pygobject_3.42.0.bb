@@ -6,6 +6,8 @@ LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a916467b91076e631dd8edb7424769c7"
 
 GNOMEBASEBUILDCLASS = "meson"
+GIR_MESON_OPTION = ""
+
 inherit gnomebase distutils3-base gobject-introspection upstream-version-is-even
 
 DEPENDS += "python3 glib-2.0"
@@ -17,8 +19,6 @@ SRC_URI = " \
     file://0001-Do-not-build-tests.patch \
 "
 SRC_URI[sha256sum] = "9b12616e32cfc792f9dc841d9c472a41a35b85ba67d3a6eb427e307a6fe4367b"
-
-UNKNOWN_CONFIGURE_WHITELIST = "introspection"
 
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
